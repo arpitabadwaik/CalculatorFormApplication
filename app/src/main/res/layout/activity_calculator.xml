@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CalculatorActivity">
+
+             <TextView
+                android:id="@+id/cal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculator"
+                 android:textSize="30sp"/>
+
+        <LinearLayout
+             android:id="@+id/linear_layout_2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="34dp"
+            android:layout_above="@+id/txt_result"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/edt_a"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/enter_a"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/edt_b"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/enter_b"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/result"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txt_result">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/addition"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/subtraction"
+                android:textAllCaps="false"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_mul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/multiplication"
+                android:textAllCaps="false"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_div"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/division"
+                android:textAllCaps="false"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

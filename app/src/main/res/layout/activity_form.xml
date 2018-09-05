@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.FormActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/txt_application_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/application_form"/>
+
+    <EditText
+        android:id="@+id/edt_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/full_name"
+        android:inputType="text"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edt_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/address"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="20sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdb_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/male"/>
+
+                    <RadioButton
+                        android:id="@+id/rdb_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female"/>
+
+                </LinearLayout>
+
+            </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/txt_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/spinner_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/city_spinner"
+            android:layout_weight="1">
+
+        </Spinner>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_hobbies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hobbies"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <CheckBox
+                android:id="@+id/check_playing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/playing"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/check_reading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/reading"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <CheckBox
+                android:id="@+id/check_swimming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/swimming"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/check_dancing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dancing"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_button"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
